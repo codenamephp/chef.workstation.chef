@@ -14,8 +14,9 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[test::default]
+      - recipe[codenamephp_workstation_chef::users]
+      - recipe[codenamephp_workstation_chef::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/integration/default
     attributes:
