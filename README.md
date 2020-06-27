@@ -37,7 +37,7 @@ default recipe in your runlist.
 
 ## Recipes
 ### Default
-The default recipe sets everything up except the users by include the `system`, `chef` and `vscode` recipes. Make sure you have created the users beforehand.
+The default recipe sets everything up except the users by include the `chef` and `vscode` recipes. Make sure you have created the users beforehand.
 
 ### Chef
 The chef recipe installs the chef-workstation and sets up the environment by managing dropfiles for bash.
