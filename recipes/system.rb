@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 #
-# Cookbook:: codenamephp_workstation_chef
-# Recipe:: default
+# Cookbook:: chef.workstation.chef
+# Recipe:: system
 #
 # Copyright:: 2020, CodenamePHP
 #
@@ -18,6 +18,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe '::system'
-include_recipe '::chef'
-include_recipe '::vscode'
+locale 'Set system locale' do
+  lang node['codenamephp']['workstation_chef']['locale']
+end
+
+timezone 'Set timezone' do
+  timezone node['codenamephp']['workstation_chef']['timezone']
+end

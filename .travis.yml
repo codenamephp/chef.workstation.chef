@@ -30,14 +30,12 @@ script:
   - chef exec rspec
   - chef exec kitchen test
 
-
 before_deploy:
   - chef exec knife cookbook metadata from file metadata.rb
 deploy:
   provider: chef_supermarket
   user_id: "codenamephp"
   client_key: "codenamephp.pem"
-  name: "codenamephp_bash"
   category: "Utilities"
   edge: true
   run:
