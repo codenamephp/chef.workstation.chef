@@ -26,6 +26,10 @@ describe 'codenamephp_workstation_chef::default' do
       expect { chef_run }.to_not raise_error
     end
 
+    it 'includes system recipe' do
+      expect(chef_run).to include_recipe('codenamephp_workstation_chef::system')
+    end
+
     it 'includes chef recipe' do
       expect(chef_run).to include_recipe('codenamephp_workstation_chef::chef')
     end
