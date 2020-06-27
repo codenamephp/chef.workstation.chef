@@ -32,14 +32,14 @@ There is also the `codenamephp_workstation_chef::recipe` that does the bare mini
 default recipe in your runlist.
 
 ## Attributes
-- `default['users']`: The usersnames that should be created and that receive the bash management and chef configs, defaults to `['chef']`
+- `default['users']`: The usernames that should be created and that receive the bash management and chef configs, defaults to `['chef']`
 - `default['codenamephp']['workstation_chef']['vscode']['extensions']`: An array of extension names that will be installed for the users for vscode, defaults to `['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github']`
 - `default['codenamephp']['workstation_chef']['locale']`: The locale that will be set as system language, defaults to `'de_DE.UTF-8'`
 - `default['codenamephp']['workstation_chef']['timezone']`: The timezone that will be set as system timezone, defaults to `'Europe/Berlin'`
 
 ## Recipes
 ### Default
-The default recipe sets everything up except the users by include the `system`, `chef` and `vscode` recipes. Make sure you have created the users bforehand.
+The default recipe sets everything up except the users by include the `system`, `chef` and `vscode` recipes. Make sure you have created the users beforehand.
 
 ### System
 This recipe sets some system defaults like locale and timezone.
