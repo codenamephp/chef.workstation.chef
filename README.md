@@ -45,6 +45,9 @@ The chef recipe installs the chef-workstation and sets up the environment by man
 ### VSCode
 The vscode recipe installs [VSCode][vscode_url] and several extensions that are useful for developing cookbooks.
 
+### Gnome
+Installs the gnome desktop and sets serveral settings and keyboard shortcuts
+
 [user_cookbook_url]: https://supermarket.chef.io/cookbooks/user
 [vscode_url]: https://code.visualstudio.com/
 [codenamephp_chef_url]: https://supermarket.chef.io/cookbooks/codenamephp_chef
