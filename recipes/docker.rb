@@ -2,7 +2,7 @@
 
 #
 # Cookbook:: codenamephp_workstation_chef
-# Spec:: default
+# Recipe:: docker
 #
 # Copyright:: 2020, CodenamePHP
 #
@@ -18,24 +18,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'spec_helper'
-
-describe 'codenamephp_workstation_chef::default' do
-  context 'When all attributes are default' do
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
-    end
-
-    it 'includes docker recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::docker')
-    end
-
-    it 'includes chef recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::chef')
-    end
-
-    it 'includes vscode recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::vscode')
-    end
-  end
-end
+codenamephp_docker_service 'Install docker'
+codenamephp_docker_compose 'Install docker-compose'
