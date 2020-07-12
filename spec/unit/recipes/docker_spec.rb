@@ -2,7 +2,7 @@
 
 #
 # Cookbook:: codenamephp_workstation_chef
-# Spec:: default
+# Spec:: docker
 #
 # Copyright:: 2020, CodenamePHP
 #
@@ -20,22 +20,18 @@
 
 require 'spec_helper'
 
-describe 'codenamephp_workstation_chef::default' do
-  context 'When all attributes are default' do
+describe 'codenamephp_workstation_chef::docker' do
+  context 'When all attributes are default, on Ubuntu 18.04' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'includes docker recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::docker')
+    it 'installs docker' do
+      expect(chef_run).to install_codenamephp_docker_service('Install docker')
     end
 
-    it 'includes chef recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::chef')
-    end
-
-    it 'includes vscode recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::vscode')
+    it 'installs docker compose' do
+      expect(chef_run).to install_codenamephp_docker_compose('Install docker-compose')
     end
   end
 end

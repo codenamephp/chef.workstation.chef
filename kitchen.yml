@@ -14,6 +14,7 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[test]
       - recipe[codenamephp_workstation_chef::users]
       - recipe[codenamephp_workstation_chef::default]
       - recipe[codenamephp_workstation_chef::gnome]
