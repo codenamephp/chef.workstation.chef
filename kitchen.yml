@@ -16,6 +16,7 @@ suites:
     run_list:
       - recipe[codenamephp_workstation_chef::users]
       - recipe[codenamephp_workstation_chef::default]
+      - recipe[codenamephp_workstation_chef::gnome]
     verifier:
       inspec_tests:
         - test/integration/default
