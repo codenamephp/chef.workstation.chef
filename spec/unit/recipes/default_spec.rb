@@ -26,6 +26,10 @@ describe 'codenamephp_workstation_chef::default' do
       expect { chef_run }.to_not raise_error
     end
 
+    it 'purges postfix' do
+      expect(chef_run).to purge_package('postfix')
+    end
+
     it 'includes docker recipe' do
       expect(chef_run).to include_recipe('codenamephp_workstation_chef::docker')
     end
