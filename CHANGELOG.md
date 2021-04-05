@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/codenamephp/chef.workstation.chef/tree/HEAD)
+## [1.4.1](https://github.com/codenamephp/chef.workstation.chef/tree/1.4.1) (2021-04-05)
 
-[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.4.0...HEAD)
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.4.0...1.4.1)
 
 **Merged pull requests:**
 
+- Release 1.4.1 [\#9](https://github.com/codenamephp/chef.workstation.chef/pull/9) ([bastianschwarz](https://github.com/bastianschwarz))
 - Build and dependencies [\#8](https://github.com/codenamephp/chef.workstation.chef/pull/8) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.4.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.4.0) (2020-08-09)
