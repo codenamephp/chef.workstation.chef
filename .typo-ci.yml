@@ -6,8 +6,8 @@ dictionaries:
 excluded_files:
   - "*.enc"
   - ".typo-ci.yml"
+  - "chefignore"
+  - "Berksfile"
+  - ".github/*"
 
-# Any typos we should ignore?
 excluded_words:
-  - eamodio
-  - timedatectl

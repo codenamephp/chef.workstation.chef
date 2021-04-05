@@ -13,6 +13,6 @@ source_url 'https://github.com/codenamephp/chef.cookbook.chef'
 supports 'debian'
 
 depends 'codenamephp_chef', '~> 2.1'
-depends 'codenamephp_dev', '~> 2.4'
+depends 'codenamephp_dev', '~> 3.0'
 depends 'codenamephp_docker', '~> 3.0'
 depends 'codenamephp_gui', '~> 2.1'
