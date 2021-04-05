@@ -1,5 +1,5 @@
 # Chef Workstation Chef
-[![Build Status](https://travis-ci.com/codenamephp/chef.workstation.chef.svg?branch=master)](https://travis-ci.com/codenamephp/chef.workstation.chef)
+[![CI](https://github.com/codenamephp/chef.workstation.chef/actions/workflows/ci.yml/badge.svg)](https://github.com/codenamephp/chef.workstation.chef/actions/workflows/ci.yml)
 
 This is a wrapper cookook that uses several codenamephp resources to setup a workstation for developing chef cookbook. This includes installing chef workstation,
 setting up the bash environment to init chef, set a local dokken environment variable, etc. and installing VSCode with chef extensions.
