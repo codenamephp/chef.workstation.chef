@@ -33,21 +33,21 @@ describe 'codenamephp_workstation_chef::vscode' do
     it 'Installs default extensions for user chef' do
       expect(chef_run).to install_codenamephp_dev_vscode_extensions('Install VSCode extensions').with(
         users_extensions: {
-          'chef' => ['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github']
+          'chef' => ['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github'],
         }
       )
     end
   end
 
   context 'With custom users and extensions' do
-    override_attributes['users'] = %w[user1 user2]
-    override_attributes['codenamephp']['workstation_chef']['vscode']['extensions'] = %w[ext1 ext2]
+    override_attributes['users'] = %w(user1 user2)
+    override_attributes['codenamephp']['workstation_chef']['vscode']['extensions'] = %w(ext1 ext2)
 
     it 'Installs custom extensions for user user1 and user2' do
       expect(chef_run).to install_codenamephp_dev_vscode_extensions('Install VSCode extensions').with(
         users_extensions: {
-          'user1' => %w[ext1 ext2],
-          'user2' => %w[ext1 ext2]
+          'user1' => %w(ext1 ext2),
+          'user2' => %w(ext1 ext2),
         }
       )
     end
