@@ -39,7 +39,7 @@ describe 'codenamephp_workstation_chef::users' do
   end
 
   context 'With custom chef attribute' do
-    override_attributes['users'] = %w[user1 user2]
+    override_attributes['users'] = %w(user1 user2)
 
     it 'Creates all users' do
       expect(chef_run).to create_user('user1').with(

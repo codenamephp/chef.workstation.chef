@@ -32,17 +32,17 @@ describe 'codenamephp_workstation_chef::chef' do
 
     it 'Installs chef einvornment using resource' do
       expect(chef_run).to install_codenamephp_chef_environment('Install chef environment for users').with(
-        users: %w[chef]
+        users: %w(chef)
       )
     end
   end
 
   context 'With custom users attribute' do
-    override_attributes['users'] = %w[user1 user2]
+    override_attributes['users'] = %w(user1 user2)
 
     it 'Installs chef environment using resource for all users' do
       expect(chef_run).to install_codenamephp_chef_environment('Install chef environment for users').with(
-        users: %w[user1 user2]
+        users: %w(user1 user2)
       )
     end
   end
