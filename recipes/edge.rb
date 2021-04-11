@@ -2,9 +2,9 @@
 
 #
 # Cookbook:: codenamephp_workstation_chef
-# Recipe:: default
+# Recipe:: edge
 #
-# Copyright:: 2020, CodenamePHP
+# Copyright:: 2021, CodenamePHP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,11 +18,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package 'postfix' do
-  action :purge
-end
-
-include_recipe '::docker'
-include_recipe '::chef'
-include_recipe '::vscode'
-include_recipe '::edge'
+codenamephp_edge_apt_repository 'Add apt repository'
+codenamephp_edge_package 'Install edge'
