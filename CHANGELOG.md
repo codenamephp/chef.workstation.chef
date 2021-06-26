@@ -7,6 +7,7 @@
 **Merged pull requests:**
 
 - Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#19](https://github.com/codenamephp/chef.workstation.chef/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump tubone24/update\_release from 1.1.0 to 1.2.0 [\#16](https://github.com/codenamephp/chef.workstation.chef/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.5.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.5.0) (2021-04-11)
 
