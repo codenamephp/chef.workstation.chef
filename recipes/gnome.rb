@@ -18,17 +18,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-codenamephp_gui_gnome 'install gnome gui'
+codenamephp_gnome_package 'install gnome gui'
 
-codenamephp_gui_gnome_gsettings 'Set display idle delay' do
-  schema CodenamePHP::Gui::Helper::Gnome::GSettings::SCHEMA_DESKTOP_SESSION
-  key CodenamePHP::Gui::Helper::Gnome::GSettings::KEY_DESKTOP_SESSION_IDLE_DELAY
+codenamephp_gnome_gsettings 'Set display idle delay' do
+  schema CodenamePHP::Gnome::GSettings::SCHEMA_DESKTOP_SESSION
+  key CodenamePHP::Gnome::GSettings::KEY_DESKTOP_SESSION_IDLE_DELAY
   value '0'
   users node['users']
 end
 
-codenamephp_gui_gnome_keyboard_shortcut 'Terminal' do
+codenamephp_gnome_keyboard_shortcut 'Terminal' do
   command 'gnome-terminal --maximize'
-  binding "#{CodenamePHP::Gui::Helper::Gnome::GSettings::Keys::SUPER}#{CodenamePHP::Gui::Helper::Gnome::GSettings::Keys::ALT}t"
+  binding "#{CodenamePHP::Gnome::GSettings::Keys::SUPER}#{CodenamePHP::Gnome::GSettings::Keys::ALT}t"
   users node['users']
 end

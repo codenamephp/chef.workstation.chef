@@ -18,7 +18,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-codenamephp_dev_vscode 'Install VSCode'
-codenamephp_dev_vscode_extensions 'Install VSCode extensions' do
+codenamephp_vscode_repository 'Install apt repo'
+codenamephp_vscode_package 'Install VSCode'
+codenamephp_vscode_extensions 'Install VSCode extensions' do
   users_extensions Hash[node['users'].collect { |username| [username, node['codenamephp']['workstation_chef']['vscode']['extensions']] }]
 end

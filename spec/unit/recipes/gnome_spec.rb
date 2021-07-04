@@ -27,15 +27,15 @@ describe 'codenamephp_workstation_chef::gnome' do
     end
 
     it 'installs gnome' do
-      expect(chef_run).to install_codenamephp_gui_gnome('install gnome gui')
+      expect(chef_run).to install_codenamephp_gnome_package('install gnome gui')
     end
 
     it 'sets the settings' do
-      expect(chef_run).to set_codenamephp_gui_gnome_gsettings('Set display idle delay')
+      expect(chef_run).to set_codenamephp_gnome_gsettings('Set display idle delay')
     end
 
     it 'sets the keyboard shortcuts' do
-      expect(chef_run).to set_codenamephp_gui_gnome_keyboard_shortcut('Terminal')
+      expect(chef_run).to set_codenamephp_gnome_keyboard_shortcut('Terminal')
     end
   end
 end

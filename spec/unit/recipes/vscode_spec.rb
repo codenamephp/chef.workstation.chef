@@ -26,12 +26,16 @@ describe 'codenamephp_workstation_chef::vscode' do
       expect { chef_run }.to_not raise_error
     end
 
+    it 'Adds apt repository' do
+      expect(chef_run).to install_codenamephp_vscode_repository('Install apt repo')
+    end
+
     it 'Installs VSCode' do
-      expect(chef_run).to install_codenamephp_dev_vscode('Install VSCode')
+      expect(chef_run).to install_codenamephp_vscode_package('Install VSCode')
     end
 
     it 'Installs default extensions for user chef' do
-      expect(chef_run).to install_codenamephp_dev_vscode_extensions('Install VSCode extensions').with(
+      expect(chef_run).to install_codenamephp_vscode_extensions('Install VSCode extensions').with(
         users_extensions: {
           'chef' => ['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github'],
         }
@@ -44,7 +48,7 @@ describe 'codenamephp_workstation_chef::vscode' do
     override_attributes['codenamephp']['workstation_chef']['vscode']['extensions'] = %w(ext1 ext2)
 
     it 'Installs custom extensions for user user1 and user2' do
-      expect(chef_run).to install_codenamephp_dev_vscode_extensions('Install VSCode extensions').with(
+      expect(chef_run).to install_codenamephp_vscode_extensions('Install VSCode extensions').with(
         users_extensions: {
           'user1' => %w(ext1 ext2),
           'user2' => %w(ext1 ext2),
