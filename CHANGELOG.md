@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.5.0...HEAD)
 
+**Implemented enhancements:**
+
+- Updated all dependencies to versions with unified mode [\#20](https://github.com/codenamephp/chef.workstation.chef/pull/20) ([bastianschwarz](https://github.com/bastianschwarz))
+
 **Merged pull requests:**
 
 - Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#19](https://github.com/codenamephp/chef.workstation.chef/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
