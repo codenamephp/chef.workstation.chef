@@ -2,7 +2,7 @@
 
 #
 # Cookbook:: codenamephp_workstation_chef
-# Spec:: default
+# Spec:: keyboard_layout
 #
 # Copyright:: 2020, CodenamePHP
 #
@@ -20,30 +20,14 @@
 
 require 'spec_helper'
 
-describe 'codenamephp_workstation_chef::default' do
+describe 'codenamephp_workstation_chef::keyboard_layout' do
   context 'When all attributes are default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'purges postfix' do
-      expect(chef_run).to purge_package('postfix')
-    end
-
-    it 'includes docker recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::docker')
-    end
-
-    it 'includes chef recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::chef')
-    end
-
-    it 'includes vscode recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::vscode')
-    end
-
-    it 'includes keyboard_layout recipe' do
-      expect(chef_run).to include_recipe('codenamephp_workstation_chef::keyboard_layout')
+    it 'Adds updates the layout' do
+      expect(chef_run).to update_codenamephp_keyboard_layout_manage('Update keyboard layout')
     end
   end
 end
