@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Setting keyboard layout using the new cookbook [\#23](https://github.com/codenamephp/chef.workstation.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
 - Updated all dependencies to versions with unified mode [\#20](https://github.com/codenamephp/chef.workstation.chef/pull/20) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Merged pull requests:**
