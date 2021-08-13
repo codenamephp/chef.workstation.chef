@@ -4,19 +4,6 @@
 This is a wrapper cookook that uses several codenamephp resources to setup a workstation for developing chef cookbook. This includes installing chef workstation,
 setting up the bash environment to init chef, set a local dokken environment variable, etc. and installing VSCode with chef extensions.
 
-## Requirements
-
-### Supported Platforms
-
-- Debian
-
-### Chef
-
-- Chef 13.0+
-
-### Dependencies
-- [codenamephp_chef][codenamephp_chef_url]
-- [codenamephp_dev][codenamephp_dev_url]
 ## Usage
 
 Add the cookbook to your Berksfile or metadata.rb:
@@ -50,5 +37,4 @@ Installs the gnome desktop and sets serveral settings and keyboard shortcuts
 
 [user_cookbook_url]: https://supermarket.chef.io/cookbooks/user
 [vscode_url]: https://code.visualstudio.com/
-[codenamephp_chef_url]: https://supermarket.chef.io/cookbooks/codenamephp_chef
-[codenamephp_dev_url]: https://supermarket.chef.io/cookbooks/codenamephp_dev
+

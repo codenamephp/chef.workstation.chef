@@ -18,6 +18,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+codenamephp_chef_repository 'Add chef repository'
 codenamephp_chef_workstation 'Install chef workstation'
 codenamephp_chef_environment 'Install chef environment for users' do
   users node['users']
