@@ -22,6 +22,7 @@ package 'postfix' do
   action :purge
 end
 
+include_recipe '::keyboard_layout'
 include_recipe '::docker'
 include_recipe '::chef'
 include_recipe '::vscode'
