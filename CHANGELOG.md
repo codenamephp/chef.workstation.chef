@@ -1,18 +1,25 @@
 # Changelog
 
-## [1.6.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.6.0) (2021-08-13)
+## [Unreleased](https://github.com/codenamephp/chef.workstation.chef/tree/HEAD)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.6.0...HEAD)
 
 **Implemented enhancements:**
 
 - Setting keyboard layout using the new cookbook [\#23](https://github.com/codenamephp/chef.workstation.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
+
+## [1.6.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.6.0) (2021-08-13)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.5.0...1.6.0)
+
+**Implemented enhancements:**
+
 - Updated all dependencies to versions with unified mode [\#20](https://github.com/codenamephp/chef.workstation.chef/pull/20) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Merged pull requests:**
 
 - Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#19](https://github.com/codenamephp/chef.workstation.chef/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump tubone24/update\_release from 1.1.0 to 1.2.0 [\#16](https://github.com/codenamephp/chef.workstation.chef/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
-
-[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.5.0...1.6.0)
 
 ## [1.5.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.5.0) (2021-04-11)
 
