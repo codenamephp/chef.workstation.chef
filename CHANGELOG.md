@@ -1,6 +1,8 @@
 # Changelog
 
-## [1.7.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.7.0) (2021-08-13)
+## [Unreleased](https://github.com/codenamephp/chef.workstation.chef/tree/HEAD)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.6.0...HEAD)
 
 **Implemented enhancements:**
 
