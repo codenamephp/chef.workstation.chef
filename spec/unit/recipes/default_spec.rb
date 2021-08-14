@@ -45,5 +45,13 @@ describe 'codenamephp_workstation_chef::default' do
     it 'includes keyboard_layout recipe' do
       expect(chef_run).to include_recipe('codenamephp_workstation_chef::keyboard_layout')
     end
+
+    it 'includes locale recipe' do
+      expect(chef_run).to include_recipe('codenamephp_workstation_chef::locale')
+    end
+
+    it 'includes timezone recipe' do
+      expect(chef_run).to include_recipe('codenamephp_workstation_chef::timezone')
+    end
   end
 end
