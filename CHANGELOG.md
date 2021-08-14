@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Added recipes for locale and timezone [\#24](https://github.com/codenamephp/chef.workstation.chef/pull/24) ([bastianschwarz](https://github.com/bastianschwarz))
 - Setting keyboard layout using the new cookbook [\#23](https://github.com/codenamephp/chef.workstation.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.6.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.6.0) (2021-08-13)
