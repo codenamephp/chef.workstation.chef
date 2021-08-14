@@ -22,6 +22,8 @@ package 'postfix' do
   action :purge
 end
 
+include_recipe '::locale'
+include_recipe '::timezone'
 include_recipe '::keyboard_layout'
 include_recipe '::docker'
 include_recipe '::chef'
