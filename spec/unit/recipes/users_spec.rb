@@ -36,11 +36,19 @@ describe 'codenamephp_workstation_chef::users' do
         manage_home: true
       )
     end
+
+    it 'creates chef users from databag' do
+      expect(chef_run).to create_codenamephp_users_from_data_bag('Create users').with(
+        data_bag_name: 'users',
+        groups: %w(chef docker sudo sysadmin)
+      )
+    end
   end
 
-  context 'With custom chef attribute' do
+  context 'With custom users attributes' do
     override_attributes['users'] = %w(user1 user2)
-
+    override_attributes['codenamephp']['workstation_chef']['users_from_data_bag']['data_bag_name'] = 'some databag'
+    override_attributes['codenamephp']['workstation_chef']['users_from_data_bag']['groups'] = %w(some groups)
     it 'Creates all users' do
       expect(chef_run).to create_user('user1').with(
         group: 'chef',
@@ -50,6 +58,11 @@ describe 'codenamephp_workstation_chef::users' do
       expect(chef_run).to create_user('user2').with(
         group: 'chef',
         manage_home: true
+      )
+
+      expect(chef_run).to create_codenamephp_users_from_data_bag('Create users').with(
+        data_bag_name: 'some databag',
+        groups: %w(some groups)
       )
     end
   end

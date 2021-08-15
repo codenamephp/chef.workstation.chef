@@ -10,3 +10,20 @@ describe user('chef') do
   its('group') { should eq 'chef' }
   its('home') { should eq '/home/chef' }
 end
+
+describe user('user1') do
+  it { should exist }
+  its('groups') { should include 'chef' }
+  its('groups') { should include 'docker' }
+  its('groups') { should include 'sudo' }
+  its('groups') { should include 'sysadmin' }
+end
+
+describe user('user2') do
+  it { should_not exist }
+end
+
+describe user('user3') do
+  it { should exist }
+  its('groups') { should include 'chef' }
+end
