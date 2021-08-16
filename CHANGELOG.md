@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Create users from data bag [\#27](https://github.com/codenamephp/chef.workstation.chef/pull/27) ([bastianschwarz](https://github.com/bastianschwarz))
 - Added recipes for locale and timezone [\#24](https://github.com/codenamephp/chef.workstation.chef/pull/24) ([bastianschwarz](https://github.com/bastianschwarz))
 - Setting keyboard layout using the new cookbook [\#23](https://github.com/codenamephp/chef.workstation.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
 
