@@ -1,0 +1,11 @@
+{
+  "id": "user1",
+  "groups": [
+    "chef",
+    "docker",
+    "sudo",
+    "sysadmin"
+  ],
+  "shell": "/bin/bash",
+  "manage_home": true
+}
