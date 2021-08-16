@@ -1,14 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/codenamephp/chef.workstation.chef/tree/HEAD)
+## [1.8.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.8.0) (2021-08-16)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.8.0...HEAD)
 
 **Implemented enhancements:**
 
 - Create users from data bag [\#27](https://github.com/codenamephp/chef.workstation.chef/pull/27) ([bastianschwarz](https://github.com/bastianschwarz))
-- Added recipes for locale and timezone [\#24](https://github.com/codenamephp/chef.workstation.chef/pull/24) ([bastianschwarz](https://github.com/bastianschwarz))
-- Setting keyboard layout using the new cookbook [\#23](https://github.com/codenamephp/chef.workstation.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.8.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.8.0) (2021-08-16)
 
@@ -17,6 +15,11 @@
 ## [1.7.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.7.0) (2021-08-14)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.6.0...1.7.0)
+
+**Implemented enhancements:**
+
+- Added recipes for locale and timezone [\#24](https://github.com/codenamephp/chef.workstation.chef/pull/24) ([bastianschwarz](https://github.com/bastianschwarz))
+- Setting keyboard layout using the new cookbook [\#23](https://github.com/codenamephp/chef.workstation.chef/pull/23) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.6.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.6.0) (2021-08-13)
 
@@ -51,16 +54,13 @@
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.3.0...1.4.0)
 
-**Implemented enhancements:**
-
-- Removing postfix [\#6](https://github.com/codenamephp/chef.workstation.chef/pull/6) ([bastianschwarz](https://github.com/bastianschwarz))
-
 ## [1.3.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.3.0) (2020-07-12)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.2.0...1.3.0)
 
 **Implemented enhancements:**
 
+- Removing postfix [\#6](https://github.com/codenamephp/chef.workstation.chef/pull/6) ([bastianschwarz](https://github.com/bastianschwarz))
 - Added new recipe for docker since the docker recipe was removed [\#4](https://github.com/codenamephp/chef.workstation.chef/pull/4) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.2.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.2.0) (2020-07-12)
