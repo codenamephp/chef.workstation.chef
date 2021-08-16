@@ -2,7 +2,7 @@
 
 #
 # Cookbook:: codenamephp_workstation_chef
-# Spec:: users
+# Spec:: users_from_data_bag
 #
 # Copyright:: 2020, CodenamePHP
 #
@@ -20,36 +20,28 @@
 
 require 'spec_helper'
 
-describe 'codenamephp_workstation_chef::users' do
+describe 'codenamephp_workstation_chef::users_from_data_bag' do
   context 'When all attributes are default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
 
-    it 'creates teh chef group' do
-      expect(chef_run).to create_group('chef')
-    end
-
-    it 'creates the chef user' do
-      expect(chef_run).to create_user('chef').with(
-        group: 'chef',
-        manage_home: true
+    it 'creates chef users from databag' do
+      expect(chef_run).to create_codenamephp_users_from_data_bag('Create users').with(
+        data_bag_name: 'users',
+        groups: %w(chef docker sudo sysadmin)
       )
     end
   end
 
   context 'With custom users attributes' do
-    override_attributes['users'] = %w(user1 user2)
+    override_attributes['codenamephp']['workstation_chef']['users_from_data_bag']['data_bag_name'] = 'some databag'
+    override_attributes['codenamephp']['workstation_chef']['users_from_data_bag']['groups'] = %w(some groups)
 
     it 'Creates all users' do
-      expect(chef_run).to create_user('user1').with(
-        group: 'chef',
-        manage_home: true
-      )
-
-      expect(chef_run).to create_user('user2').with(
-        group: 'chef',
-        manage_home: true
+      expect(chef_run).to create_codenamephp_users_from_data_bag('Create users').with(
+        data_bag_name: 'some databag',
+        groups: %w(some groups)
       )
     end
   end

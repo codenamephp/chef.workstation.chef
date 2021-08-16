@@ -8,7 +8,3 @@
 describe package('code') do
   it { should be_installed }
 end
-
-describe bash('sudo -iHu chef code --list-extensions') do
-  its('stdout') { should match(/chef-software.chef/) }
-end
