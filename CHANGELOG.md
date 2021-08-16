@@ -2,11 +2,15 @@
 
 ## [1.8.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.8.0) (2021-08-16)
 
-[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.7.0...1.8.0)
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.8.0...HEAD)
 
 **Implemented enhancements:**
 
 - Create users from data bag [\#27](https://github.com/codenamephp/chef.workstation.chef/pull/27) ([bastianschwarz](https://github.com/bastianschwarz))
+
+## [1.8.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.8.0) (2021-08-16)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.7.0...1.8.0)
 
 ## [1.7.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.7.0) (2021-08-14)
 
