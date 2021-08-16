@@ -2,5 +2,7 @@
   "id": "user3",
   "groups": [
     "chef"
-  ]
+  ],
+  "shell": "/bin/bash",
+  "manage_home": true
 }

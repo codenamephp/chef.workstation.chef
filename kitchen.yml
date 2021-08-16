@@ -13,7 +13,6 @@ platforms:
 
 suites:
   - name: default
-    data_bags_path: "test/integration/data_bags"
     run_list:
       - recipe[codenamephp_workstation_chef::users]
       - recipe[codenamephp_workstation_chef::default]
@@ -21,12 +20,16 @@ suites:
     verifier:
       inspec_tests:
         - test/integration/default
+        - test/integration/users
     attributes:
-  - name: users_without_databag
-    data_bags_path: ""
+  - name: users-from-data-bag
+    data_bags_path: "test/integration/data_bags"
     run_list:
-      - recipe[codenamephp_workstation_chef::users]
+      - recipe[codenamephp_workstation_chef::users_from_data_bag]
+      - recipe[codenamephp_workstation_chef::default]
+      - recipe[codenamephp_workstation_chef::gnome]
     verifier:
       inspec_tests:
-        - test/integration/users_without_databag
-    attributes:
+        - test/integration/default
+        - test/integration/users_from_data_bag
+    attributes: { users: ["user1", "user3"] }
