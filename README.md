@@ -28,9 +28,20 @@ default recipe in your runlist.
   - These users will get the VSCode extensions installed
   - If the gnome recipe is included it is used to setup keyboard shortcuts
 
+### users_from_data_bag
+
 Used in the optional users_from_data_bag recipe:
 - `default['codenamephp']['workstation_chef']['users_from_data_bag']['data_bag_name']`: The name of the databag to get the users from, defaults to `'users'`
 - `default['codenamephp']['workstation_chef']['users_from_data_bag']['groups']`: The groups to find the users that will be managed. Defaults to `%w(chef docker sudo sysadmin)`
+
+### users
+Used in the optional users cookbook:
+
+The recipe checks for a specific path within the attributes that corresponds to the values of `default['users']` to copy ssh keys.
+There is a default set for the default 'chef' user:
+
+- `default['codenamephp']['workstation_chef']['ssh_keys']['local_copy']['chef']['private_key_source']`: `'/var/workspace/id_rsa'`
+
 
 ## Recipes
 
@@ -46,6 +57,13 @@ If you don't use one of those recipes make sure to create the users yourself sin
 
 #### Users
 The users recipe is very very simple user setup. It just creates all users in the `default['users']` attribute with a home directory and an empty password and add them to the chef group.
+
+It checks for a specific path within the attributes that corresponds to the values of `default['users']` to copy ssh keys.
+There is a default set for the default 'chef' user:
+
+- `default['codenamephp']['workstation_chef']['ssh_keys']['local_copy']['chef']['private_key_source']`: `'/var/workspace/id_rsa'`
+
+You can change this value or add additional attributes for additional users. If you need anything more sophisticated you should provide your own logic in a wrapper cookbook.
 
 #### Users From Data Bag
 A more sophisticated method of creating users. It looks for a databag with the name in `default['codenamephp']['workstation_chef']['users_from_data_bag']['data_bag_name']`

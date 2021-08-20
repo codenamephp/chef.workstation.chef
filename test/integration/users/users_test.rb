@@ -10,3 +10,21 @@ describe user('chef') do
   its('group') { should eq 'chef' }
   its('home') { should eq '/home/chef' }
 end
+
+describe file('/home/chef/.ssh/id_rsa') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should eq 'my private key' }
+  its('group') { should eq 'chef' }
+  its('owner') { should eq 'chef' }
+  its('mode') { should cmp '0600' }
+end
+
+describe file('/home/chef/.ssh/id_rsa.pub') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should eq 'my public key' }
+  its('group') { should eq 'chef' }
+  its('owner') { should eq 'chef' }
+  its('mode') { should cmp '0640' }
+end
