@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.8.0...1.9.0)
 
+**Implemented enhancements:**
+
+- Added ssh\_keys cookbook and copy for local keys [\#28](https://github.com/codenamephp/chef.workstation.chef/pull/28) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.8.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.8.0) (2021-08-16)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.7.0...1.8.0)
@@ -28,19 +32,15 @@
 **Implemented enhancements:**
 
 - Updated all dependencies to versions with unified mode [\#20](https://github.com/codenamephp/chef.workstation.chef/pull/20) ([bastianschwarz](https://github.com/bastianschwarz))
+- Adding ms edge [\#11](https://github.com/codenamephp/chef.workstation.chef/pull/11) ([bastianschwarz](https://github.com/bastianschwarz))
 
 **Merged pull requests:**
 
-- Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#19](https://github.com/codenamephp/chef.workstation.chef/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump tubone24/update\_release from 1.1.0 to 1.2.0 [\#16](https://github.com/codenamephp/chef.workstation.chef/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.5.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.5.0) (2021-04-11)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.4.1...1.5.0)
-
-**Implemented enhancements:**
-
-- Adding ms edge [\#11](https://github.com/codenamephp/chef.workstation.chef/pull/11) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.4.1](https://github.com/codenamephp/chef.workstation.chef/tree/1.4.1) (2021-04-05)
 
@@ -48,6 +48,7 @@
 
 **Merged pull requests:**
 
+- Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#19](https://github.com/codenamephp/chef.workstation.chef/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Build and dependencies [\#8](https://github.com/codenamephp/chef.workstation.chef/pull/8) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.4.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.4.0) (2020-08-09)

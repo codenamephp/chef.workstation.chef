@@ -26,4 +26,10 @@ node['users'].each do |username|
     manage_home true
     shell '/bin/bash'
   end
+
+  codenamephp_ssh_keys_local_copy "Copy ssh keys for #{username}" do
+    user username
+    private_key_source node.dig(:codenamephp, :workstation_chef, :ssh_keys, :local_copy, username, :private_key_source)
+    only_if { node.dig(:codenamephp, :workstation_chef, :ssh_keys, :local_copy, username, :private_key_source).is_a? String }
+  end
 end
