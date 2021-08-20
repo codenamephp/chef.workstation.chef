@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.9.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.9.0) (2021-08-20)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.8.0...1.9.0)
+
 ## [1.8.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.8.0) (2021-08-16)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.7.0...1.8.0)
