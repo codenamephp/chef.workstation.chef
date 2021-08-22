@@ -18,6 +18,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include_recipe '::git'
+
 group 'chef'
 
 node['users'].each do |username|
@@ -31,5 +33,14 @@ node['users'].each do |username|
     user username
     private_key_source node.dig(:codenamephp, :workstation_chef, :ssh_keys, :local_copy, username, :private_key_source)
     only_if { node.dig(:codenamephp, :workstation_chef, :ssh_keys, :local_copy, username, :private_key_source).is_a? String }
+  end
+
+  codenamephp_git_client_config_user "Set configs for #{username}" do
+    user username
+    configs lazy { node.dig(:codenamephp, :workstation_chef, :git_client, username, :config) || {} }
+    only_if do
+      configs = node.dig(:codenamephp, :workstation_chef, :git_client, username, :config)
+      configs.is_a?(Hash) && !configs.empty?
+    end
   end
 end

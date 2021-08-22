@@ -21,3 +21,19 @@ describe user('user3') do
   it { should exist }
   its('groups') { should include 'chef' }
 end
+
+describe command('sudo -u user1 git config --global user.name') do
+  its('stdout.strip') { should eq('User 1') }
+end
+
+describe command('sudo -u user1 git config --global user.email') do
+  its('stdout.strip') { should eq('user1@test.de') }
+end
+
+describe command('sudo -u user3 git config --global user.name') do
+  its('stdout.strip') { should eq('User 3') }
+end
+
+describe command('sudo -u user3 git config --global user.email') do
+  its('stdout.strip') { should eq('user3@test.de') }
+end

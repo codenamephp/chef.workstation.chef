@@ -32,6 +32,12 @@ describe 'codenamephp_workstation_chef::users_from_data_bag' do
         groups: %w(chef docker sudo sysadmin)
       )
     end
+
+    it 'managers git users from data bag' do
+      expect(chef_run).to include_recipe('codenamephp_workstation_chef::git')
+
+      expect(chef_run).to manage_codenamephp_git_client_config_users_from_data_bag('Manage git users')
+    end
   end
 
   context 'With custom users attributes' do

@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 #
-# Cookbook:: codenamephp_workstation_chef
-# Recipe:: default
+# Cookbook:: codenamephp_workstation_
+# Spec:: git
 #
-# Copyright:: 2020, CodenamePHP
+# Copyright:: 2021, CodenamePHP
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,15 +18,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-package 'postfix' do
-  action :purge
-end
+require 'spec_helper'
 
-include_recipe '::locale'
-include_recipe '::timezone'
-include_recipe '::keyboard_layout'
-include_recipe '::docker'
-include_recipe '::chef'
-include_recipe '::vscode'
-include_recipe '::edge'
-include_recipe '::git'
+describe 'codenamephp_workstation_chef::git' do
+  context 'When all attributes are default' do
+    it 'converges successfully' do
+      expect { chef_run }.to_not raise_error
+    end
+
+    it 'Installs git' do
+      expect(chef_run).to install_codenamephp_git_client_package('Install git')
+    end
+  end
+end
