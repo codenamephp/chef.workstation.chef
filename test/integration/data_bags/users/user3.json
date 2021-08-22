@@ -4,5 +4,13 @@
     "chef"
   ],
   "shell": "/bin/bash",
-  "manage_home": true
+  "manage_home": true,
+  "codenamephp": {
+    "git_client": {
+      "config": {
+        "user.name": "User 3",
+        "user.email": "user3@test.de"
+      }
+    }
+  }
 }

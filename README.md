@@ -54,7 +54,8 @@ and adds all users that have one the groups from `default['codenamephp']['workst
 Note that the `default['users']` attribute is still important since this is used to setup things like vscode and chef. The databag is just for the creation of the users so you
 should try to match them (for now).
 
+Also any users according to the [codenamephp_git_client_config_users_from_data_bag resource][codenamephp_git_client_config_users_from_data_bag_url] are managed as well.
 
 [user_cookbook_url]: https://supermarket.chef.io/cookbooks/user
 [vscode_url]: https://code.visualstudio.com/
-
+[codenamephp_git_client_config_users_from_data_bag_url]: https://github.com/codenamephp/chef.cookbook.gitClient#config_users_from_data_bag
