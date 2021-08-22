@@ -13,6 +13,14 @@ platforms:
 
 suites:
   - name: default
+    lifecycle:
+      pre_converge:
+        - remote: |
+            /bin/bash -c "
+            mkdir --parents /var/workspace && \
+            echo -n 'my private key' > /var/workspace/id_rsa && \
+            echo -n 'my public key' > /var/workspace/id_rsa.pub
+            "
     run_list:
       - recipe[codenamephp_workstation_chef::users]
       - recipe[codenamephp_workstation_chef::default]

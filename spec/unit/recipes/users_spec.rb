@@ -36,10 +36,18 @@ describe 'codenamephp_workstation_chef::users' do
         manage_home: true
       )
     end
+
+    it 'copies the ssh key' do
+      expect(chef_run).to install_codenamephp_ssh_keys_local_copy('Copy ssh keys for chef').with(
+        user: 'chef',
+        private_key_source: '/var/workspace/id_rsa'
+      )
+    end
   end
 
   context 'With custom users attributes' do
     override_attributes['users'] = %w(user1 user2)
+    override_attributes['codenamephp']['workstation_chef']['ssh_keys']['local_copy']['user1']['private_key_source'] = '/some/private/key'
 
     it 'Creates all users' do
       expect(chef_run).to create_user('user1').with(
@@ -51,6 +59,15 @@ describe 'codenamephp_workstation_chef::users' do
         group: 'chef',
         manage_home: true
       )
+    end
+
+    it 'copies the ssh key for user1 and not user2' do
+      expect(chef_run).to install_codenamephp_ssh_keys_local_copy('Copy ssh keys for user1').with(
+        user: 'user1',
+        private_key_source: '/some/private/key'
+      )
+
+      expect(chef_run).to_not install_codenamephp_ssh_keys_local_copy('Copy ssh keys for user2')
     end
   end
 end
