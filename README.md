@@ -37,11 +37,11 @@ Used in the optional users_from_data_bag recipe:
 ### users
 Used in the optional users cookbook:
 
-The recipe checks for a specific path within the attributes that corresponds to the values of `default['users']` to copy ssh keys.
+The recipe checks for a specific path within the attributes that corresponds to the values of `default['users']` to copy ssh keys and manage git configs.
 There is a default set for the default 'chef' user:
 
 - `default['codenamephp']['workstation_chef']['ssh_keys']['local_copy']['chef']['private_key_source']`: `'/var/workspace/id_rsa'`
-
+- `default['codenamephp']['workstation_chef']['git_client']['chef']['config'] = {}`
 
 ## Recipes
 
@@ -65,6 +65,10 @@ There is a default set for the default 'chef' user:
 
 You can change this value or add additional attributes for additional users. If you need anything more sophisticated you should provide your own logic in a wrapper cookbook.
 
+It also manages the git config for the set users. By default it's empty but you can set this the same way as attributes:
+
+- `default['codenamephp']['workstation_chef']['git_client']['chef']['config'] = {}`
+
 #### Users From Data Bag
 A more sophisticated method of creating users. It looks for a databag with the name in `default['codenamephp']['workstation_chef']['users_from_data_bag']['data_bag_name']`
 and adds all users that have one the groups from `default['codenamephp']['workstation_chef']['users_from_data_bag']['groups']`.
@@ -72,7 +76,8 @@ and adds all users that have one the groups from `default['codenamephp']['workst
 Note that the `default['users']` attribute is still important since this is used to setup things like vscode and chef. The databag is just for the creation of the users so you
 should try to match them (for now).
 
+Also any users according to the [codenamephp_git_client_config_users_from_data_bag resource][codenamephp_git_client_config_users_from_data_bag_url] are managed as well.
 
 [user_cookbook_url]: https://supermarket.chef.io/cookbooks/user
 [vscode_url]: https://code.visualstudio.com/
-
+[codenamephp_git_client_config_users_from_data_bag_url]: https://github.com/codenamephp/chef.cookbook.gitClient#config_users_from_data_bag

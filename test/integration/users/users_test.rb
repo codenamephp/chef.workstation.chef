@@ -28,3 +28,11 @@ describe file('/home/chef/.ssh/id_rsa.pub') do
   its('owner') { should eq 'chef' }
   its('mode') { should cmp '0640' }
 end
+
+describe command('sudo -u chef git config --global user.name') do
+  its('stdout.strip') { should eq('I am Chef') }
+end
+
+describe command('sudo -u chef git config --global user.email') do
+  its('stdout.strip') { should eq('chef@test.de') }
+end

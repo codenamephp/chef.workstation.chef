@@ -29,7 +29,21 @@ suites:
       inspec_tests:
         - test/integration/default
         - test/integration/users
-    attributes:
+    attributes: {
+      "codenamephp": {
+        "workstation_chef": {
+          "git_client": {
+            "chef": {
+              "config": {
+                "user.name": "I am Chef",
+                "user.email": "chef@test.de"
+              }
+            }
+          }
+        }
+      }
+    }
+
   - name: users-from-data-bag
     data_bags_path: "test/integration/data_bags"
     run_list:
