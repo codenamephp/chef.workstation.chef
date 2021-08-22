@@ -53,5 +53,9 @@ describe 'codenamephp_workstation_chef::default' do
     it 'includes timezone recipe' do
       expect(chef_run).to include_recipe('codenamephp_workstation_chef::timezone')
     end
+
+    it 'includes git recipe' do
+      expect(chef_run).to include_recipe('codenamephp_workstation_chef::git')
+    end
   end
 end
