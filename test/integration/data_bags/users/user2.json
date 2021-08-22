@@ -2,13 +2,5 @@
   "id": "user2",
   "groups": [
     "not-chef"
-  ],
-  "codenamephp": {
-    "git_client": {
-      "config": {
-        "user.name": "User 2",
-        "user.email": "user2@test.de"
-      }
-    }
-  }
+  ]
 }

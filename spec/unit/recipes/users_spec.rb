@@ -43,11 +43,20 @@ describe 'codenamephp_workstation_chef::users' do
         private_key_source: '/var/workspace/id_rsa'
       )
     end
+
+    it 'will not try to config git' do
+      expect(chef_run).to_not set_codenamephp_git_client_config_user('Set configs for chef')
+    end
   end
 
   context 'With custom users attributes' do
     override_attributes['users'] = %w(user1 user2)
     override_attributes['codenamephp']['workstation_chef']['ssh_keys']['local_copy']['user1']['private_key_source'] = '/some/private/key'
+    override_attributes['codenamephp']['workstation_chef']['git_client']['user1']['config'] = { 'user.name' => 'User 1', 'user.email' => 'user1@test.de' }
+
+    it 'includes git recipe' do
+      expect(chef_run).to include_recipe('codenamephp_workstation_chef::git')
+    end
 
     it 'Creates all users' do
       expect(chef_run).to create_user('user1').with(
@@ -68,6 +77,11 @@ describe 'codenamephp_workstation_chef::users' do
       )
 
       expect(chef_run).to_not install_codenamephp_ssh_keys_local_copy('Copy ssh keys for user2')
+    end
+
+    it 'will config git for user1 but not user2' do
+      expect(chef_run).to set_codenamephp_git_client_config_user('Set configs for user1').with(user: 'user1', configs: { 'user.name' => 'User 1', 'user.email' => 'user1@test.de' })
+      expect(chef_run).to_not set_codenamephp_git_client_config_user('Set configs for user2')
     end
   end
 end
