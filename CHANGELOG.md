@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.10.0) (2021-08-22)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.9.0...1.10.0)
+
+**Implemented enhancements:**
+
+- Added git [\#30](https://github.com/codenamephp/chef.workstation.chef/pull/30) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.9.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.9.0) (2021-08-20)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.8.0...1.9.0)
