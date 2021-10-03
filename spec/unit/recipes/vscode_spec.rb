@@ -37,7 +37,7 @@ describe 'codenamephp_workstation_chef::vscode' do
     it 'Installs default extensions for user chef' do
       expect(chef_run).to install_codenamephp_vscode_extensions('Install VSCode extensions').with(
         users_extensions: {
-          'chef' => ['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github'],
+          'chef' => ['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github', 'tabnine.tabnine-vscode'],
         }
       )
     end
