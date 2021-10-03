@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.11.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.11.0) (2021-10-03)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.10.0...1.11.0)
+
+**Implemented enhancements:**
+
+- Installing Tabnine extension [\#32](https://github.com/codenamephp/chef.workstation.chef/pull/32) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.10.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.10.0) (2021-08-22)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.9.0...1.10.0)
