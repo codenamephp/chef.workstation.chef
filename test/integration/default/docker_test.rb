@@ -11,6 +11,10 @@ describe service('docker') do
   it { should be_running }
 end
 
-describe command('docker-compose -v') do
-  its('stdout') { should match(/docker-compose version/) }
+describe command('docker compose version') do
+  its('stdout') { should match(/Docker Compose version/) }
+end
+
+describe command("docker compose version | grep version | awk -F'[ ,]+' '{print $4}'") do
+  its('stdout') { should cmp > '2.0.0' }
 end
