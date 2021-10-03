@@ -19,4 +19,4 @@
 # limitations under the License.
 
 codenamephp_docker_service 'Install docker'
-codenamephp_docker_compose 'Install docker-compose'
+codenamephp_docker_compose2 'Install docker compose'

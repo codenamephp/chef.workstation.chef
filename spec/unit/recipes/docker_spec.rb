@@ -31,7 +31,7 @@ describe 'codenamephp_workstation_chef::docker' do
     end
 
     it 'installs docker compose' do
-      expect(chef_run).to install_codenamephp_docker_compose('Install docker-compose')
+      expect(chef_run).to install_codenamephp_docker_compose2('Install docker compose')
     end
   end
 end
