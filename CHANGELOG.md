@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/codenamephp/chef.workstation.chef/tree/2.0.0) (2021-10-03)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.11.0...2.0.0)
+
+**Merged pull requests:**
+
+- Switching to compose2 resource [\#34](https://github.com/codenamephp/chef.workstation.chef/pull/34) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [1.11.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.11.0) (2021-10-03)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.10.0...1.11.0)
