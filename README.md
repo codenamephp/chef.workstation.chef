@@ -19,7 +19,7 @@ There is also the `codenamephp_workstation_chef::recipe` that does the bare mini
 default recipe in your runlist.
 
 ## Attributes
-- `default['codenamephp']['workstation_chef']['vscode']['extensions']`: An array of extension names that will be installed for the users for vscode, defaults to `['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github']`
+- `default['codenamephp']['workstation_chef']['vscode']['extensions']`: An array of extension names that will be installed for the users for vscode, defaults to `['chef-software.chef', 'eamodio.gitlens', 'github.vscode-pull-request-github', 'tabnine.tabnine-vscode']`
 - `default['codenamephp']['workstation_chef']['timezone']`: The timezone to set, defaults to 'Europe/Berlin'
 - `default['codenamephp']['workstation_chef']['locale']`: The locale to set, defaults to 'de_DE.UTF-8'
 - `default['users']`: This is used for a lot of different things, defaults to `['chef']`
