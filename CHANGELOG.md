@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.1](https://github.com/codenamephp/chef.workstation.chef/tree/2.0.1) (2021-11-02)
+
+[Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/2.0.0...2.0.1)
+
+**Merged pull requests:**
+
+- Bump bobheadxi/deployments from 0.6.0 to 0.6.1 [\#35](https://github.com/codenamephp/chef.workstation.chef/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [2.0.0](https://github.com/codenamephp/chef.workstation.chef/tree/2.0.0) (2021-10-03)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.11.0...2.0.0)
