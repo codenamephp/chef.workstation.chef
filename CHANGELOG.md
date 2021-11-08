@@ -1,11 +1,12 @@
 # Changelog
 
-## [2.0.1](https://github.com/codenamephp/chef.workstation.chef/tree/2.0.1) (2021-11-02)
+## [2.0.1](https://github.com/codenamephp/chef.workstation.chef/tree/2.0.1) (2021-11-08)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/2.0.0...2.0.1)
 
 **Merged pull requests:**
 
+- Bump tubone24/update\_release from 1.2.0 to 1.3.1 [\#36](https://github.com/codenamephp/chef.workstation.chef/pull/36) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump bobheadxi/deployments from 0.6.0 to 0.6.1 [\#35](https://github.com/codenamephp/chef.workstation.chef/pull/35) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [2.0.0](https://github.com/codenamephp/chef.workstation.chef/tree/2.0.0) (2021-10-03)
@@ -68,7 +69,6 @@
 **Merged pull requests:**
 
 - Bump bobheadxi/deployments from 0.5.2 to 0.6.0 [\#19](https://github.com/codenamephp/chef.workstation.chef/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
-- Bump tubone24/update\_release from 1.1.0 to 1.2.0 [\#16](https://github.com/codenamephp/chef.workstation.chef/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.5.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.5.0) (2021-04-11)
 
@@ -93,6 +93,7 @@
 **Implemented enhancements:**
 
 - Removing postfix [\#6](https://github.com/codenamephp/chef.workstation.chef/pull/6) ([bastianschwarz](https://github.com/bastianschwarz))
+- Keyboard shortcuts [\#3](https://github.com/codenamephp/chef.workstation.chef/pull/3) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.3.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.3.0) (2020-07-12)
 
@@ -102,13 +103,13 @@
 
 - Added new recipe for docker since the docker recipe was removed [\#4](https://github.com/codenamephp/chef.workstation.chef/pull/4) ([bastianschwarz](https://github.com/bastianschwarz))
 
+**Merged pull requests:**
+
+- Bump tubone24/update\_release from 1.1.0 to 1.2.0 [\#16](https://github.com/codenamephp/chef.workstation.chef/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.2.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.2.0) (2020-07-12)
 
 [Full Changelog](https://github.com/codenamephp/chef.workstation.chef/compare/1.0.0...1.2.0)
-
-**Implemented enhancements:**
-
-- Keyboard shortcuts [\#3](https://github.com/codenamephp/chef.workstation.chef/pull/3) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [1.0.0](https://github.com/codenamephp/chef.workstation.chef/tree/1.0.0) (2020-06-26)
 
